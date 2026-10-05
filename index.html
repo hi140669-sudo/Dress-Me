@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dress Me</title>
+<style>
+@font-face{font-family:"Galmuri11";src:url(data:font/woff2;base64,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) format("woff2");font-display:swap}
+@font-face{font-family:"Galmuri11B";src:url(data:font/woff2;base64,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) format("woff2");font-display:swap}
+
+:root{
+  --bg-top:#A92C6B; --bg-mid:#DA6CA4; --bg-bot:#BE3F7D; --spark:rgba(255,255,255,.38);
+  --line:#3A0D2A; --text:#3A0D2A; --muted:#7A4A66; --on-bg:#FFF5FA; --muted-bg:#FAD3E6;
+  --pink:#D5243A; --pink-hi:#F26A7C; --pink-lo:#97101F; --on-pink:#FFFFFF;
+  --sel:#F59AC4; --sel-hi:#FFD3E8; --sel-lo:#C65E8E;
+  --cell:#D9D5E0; --cell-hi:#F7F5FA; --cell-lo:#A8A0B4; --paper:#FCEFF6; --stage:#F6E7F0;
+  --warn:#FFF0A0;
+  --font:"Galmuri11", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-b:"Galmuri11B", "Galmuri11", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg-top:#4E0F35; --bg-mid:#6E1E4C; --bg-bot:#2E0920; --spark:rgba(255,255,255,.16);
+    --line:#14030E; --text:#FBEFF5; --muted:#D4B4C8; --on-bg:#FBEFF5; --muted-bg:#E7B9D2;
+    --pink:#E0384C; --pink-hi:#F57B8B; --pink-lo:#9A1426; --on-pink:#FFFFFF;
+    --sel:#C9558C; --sel-hi:#E88CB8; --sel-lo:#8A2F5C;
+    --cell:#5E4C66; --cell-hi:#7D6A86; --cell-lo:#3B2D42; --paper:#3A1530; --stage:#4A2440;
+    --warn:#FFE27A;
+  }
+}
+:root[data-theme="dark"]{
+    --bg-top:#4E0F35; --bg-mid:#6E1E4C; --bg-bot:#2E0920; --spark:rgba(255,255,255,.16);
+    --line:#14030E; --text:#FBEFF5; --muted:#D4B4C8; --on-bg:#FBEFF5; --muted-bg:#E7B9D2;
+    --pink:#E0384C; --pink-hi:#F57B8B; --pink-lo:#9A1426; --on-pink:#FFFFFF;
+    --sel:#C9558C; --sel-hi:#E88CB8; --sel-lo:#8A2F5C;
+    --cell:#5E4C66; --cell-hi:#7D6A86; --cell-lo:#3B2D42; --paper:#3A1530; --stage:#4A2440;
+    --warn:#FFE27A;
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{margin:0;min-height:100%}
+body{
+  background:radial-gradient(circle, var(--spark) 1px, transparent 1.6px) 0 0/28px 28px,
+    radial-gradient(circle, var(--spark) 1px, transparent 1.6px) 14px 14px/28px 28px,
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 46%, var(--bg-bot) 100%);
+  background-color:var(--bg-mid);
+  color:var(--on-bg); font-family:var(--font); font-size:14px; line-height:1.5;
+  -webkit-tap-highlight-color:transparent;
+}
+button,input,label{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--pink-lo);outline-offset:2px}
+img{max-width:100%}
+.app{max-width:1080px;margin:0 auto;padding:14px 14px 40px}
+
+/* top bar */
+.bar{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:10px;margin-bottom:14px;min-height:44px}
+.bar .mid{justify-self:center}
+.sq{width:44px;height:40px;border:2px solid var(--line);background:var(--pink);color:var(--on-pink);
+  box-shadow:inset 2px 2px 0 var(--pink-hi), inset -2px -2px 0 var(--pink-lo), 0 3px 0 var(--line);
+  display:grid;place-items:center;padding:0}
+.sq:active{transform:translateY(2px);box-shadow:inset 2px 2px 0 var(--pink-hi), inset -2px -2px 0 var(--pink-lo), 0 1px 0 var(--line)}
+.sq svg{width:22px;height:22px;image-rendering:pixelated}
+.pill{font-family:var(--font-b);font-size:24px;line-height:1;padding:8px 22px 9px;border:2px solid var(--line);border-radius:999px;
+  background:var(--pink);color:var(--on-pink);box-shadow:inset 0 2px 0 var(--pink-hi), inset 0 -3px 0 var(--pink-lo);letter-spacing:.04em;white-space:nowrap}
+.btn{font-family:var(--font-b);font-size:12px;letter-spacing:.06em;padding:8px 14px;border:2px solid var(--line);background:var(--pink);color:var(--on-pink);
+  box-shadow:inset 2px 2px 0 var(--pink-hi), inset -2px -2px 0 var(--pink-lo), 0 3px 0 var(--line);min-height:38px}
+.btn:active{transform:translateY(2px);box-shadow:inset 2px 2px 0 var(--pink-hi), inset -2px -2px 0 var(--pink-lo), 0 1px 0 var(--line)}
+.btn.grey{background:var(--cell);color:var(--text);box-shadow:inset 2px 2px 0 var(--cell-hi), inset -2px -2px 0 var(--cell-lo), 0 3px 0 var(--line)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.btn.on{background:var(--pink-lo);color:#fff}
+
+/* tabs (상의 / 하의) */
+.tabs{display:flex;gap:10px;justify-content:center;margin:0 0 12px}
+.tab{color:var(--text);min-width:92px;padding:6px 14px;border:2px solid var(--line);background:var(--cell);font-size:14px;
+  box-shadow:inset 2px 2px 0 var(--cell-hi), inset -2px -2px 0 var(--cell-lo)}
+.tab[aria-pressed="true"]{background:var(--pink);color:var(--on-pink);box-shadow:inset 2px 2px 0 var(--pink-hi), inset -2px -2px 0 var(--pink-lo)}
+
+/* item grid */
+.shelf{display:grid;grid-template-columns:32px 1fr 32px;gap:8px;align-items:center}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);border:3px solid var(--line);background:var(--line);gap:3px}
+.cell{aspect-ratio:1;background:var(--cell);border:0;padding:6px;position:relative;
+  box-shadow:inset 3px 3px 0 var(--cell-hi), inset -3px -3px 0 var(--cell-lo);display:grid;place-items:center;min-width:0}
+.cell img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain;pointer-events:none;filter:drop-shadow(0 2px 0 rgba(0,0,0,.18))}
+.cell[aria-pressed="true"]{background:var(--sel);box-shadow:inset 3px 3px 0 var(--sel-hi), inset -3px -3px 0 var(--sel-lo)}
+.cell.empty{cursor:default}
+.cell .x{position:absolute;top:4px;right:4px;width:20px;height:20px;border:2px solid var(--line);background:#fff;color:#2A2533;
+  font-size:12px;line-height:14px;display:none}
+.deleting .cell:not(.empty) .x{display:block}
+.deleting .cell:not(.empty){animation:wob .35s steps(2) infinite alternate}
+@keyframes wob{from{transform:rotate(-1.5deg)}to{transform:rotate(1.5deg)}}
+@media (prefers-reduced-motion:reduce){.deleting .cell:not(.empty){animation:none}}
+.arrow{width:32px;height:32px;border-radius:50%;border:2px solid var(--line);background:var(--cell-hi);padding:0;display:grid;place-items:center}
+.arrow::before{content:"";border:7px solid transparent;border-left:10px solid var(--line);margin-left:9px}
+.arrow.prev::before{border-left:7px solid transparent;border-right:10px solid var(--line);margin-left:0;margin-right:9px}
+.arrow[disabled]{opacity:.3;cursor:default}
+.pager{text-align:center;font-size:12px;color:var(--muted-bg);margin-top:6px;min-height:18px}
+.box{border:3px solid var(--line);background:var(--paper);color:var(--text);padding:12px}
+.empty-note{text-align:center;color:var(--on-bg);margin:14px auto 0;max-width:34ch}
+
+/* screens */
+.screen{display:none}
+.screen.active{display:block}
+
+/* home */
+.home{display:grid;justify-items:center;text-align:center;padding-top:6vh;gap:14px}
+.logo{font-family:var(--font-b);font-size:48px;line-height:1.15;margin:0;letter-spacing:.03em;color:transparent;
+  background:linear-gradient(90deg, #FFB8E0, #B4E2FF, #D4BCFF, #FFEFA3, #B2F0D5, #FFB8E0) 0 0/400% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  filter:drop-shadow(3px 3px 0 var(--pink)) drop-shadow(3px 3px 0 var(--line));
+  animation:holo 9s linear infinite}
+.logo span{color:transparent;
+  background:linear-gradient(115deg, transparent 42%, #fff 47%, #fff 53%, transparent 58%) 120% 0/300% 100% no-repeat;
+  -webkit-background-clip:text;background-clip:text;animation:shine 4.5s steps(16) infinite}
+@keyframes holo{to{background-position:400% 0}}
+@keyframes shine{0%{background-position:120% 0}55%,100%{background-position:-20% 0}}
+@media (prefers-reduced-motion:reduce){.logo,.logo span{animation:none}}
+.home p{margin:0;color:var(--muted-bg)}
+.hanger{width:132px;height:auto;image-rendering:pixelated}
+.home-menu{display:grid;gap:14px;width:min(320px,100%);margin-top:10px}
+.home-menu .btn{font-size:24px;padding:12px;letter-spacing:.02em}
+.home-menu small{display:block;font-family:var(--font);font-size:12px;letter-spacing:0;opacity:.8;margin-top:2px}
+.mode{font-size:12px;color:var(--muted-bg);margin-top:8px}
+
+/* wardrobe */
+.ward{max-width:560px;margin:0 auto}
+.tools{display:flex;justify-content:center;gap:12px;margin-top:14px}
+.round{color:var(--text);width:40px;height:40px;border-radius:50%;border:2px solid var(--line);background:var(--cell-hi);font-size:20px;line-height:1;padding:0;display:grid;place-items:center}
+.round.on{background:var(--sel)}
+.round svg{width:20px;height:20px}
+
+/* add */
+.add{max-width:620px;margin:0 auto}
+.compare{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center;gap:6px}
+.frame{color:var(--text);aspect-ratio:3/4;border:3px solid var(--line);background:var(--cell);
+  box-shadow:inset 3px 3px 0 var(--cell-hi), inset -3px -3px 0 var(--cell-lo);display:grid;place-items:center;overflow:hidden;position:relative;padding:8px}
+.frame img{width:100%;height:100%;object-fit:contain}
+.frame.result{background:var(--stage)}
+.drop{border-style:dashed;cursor:pointer;text-align:center;font-size:14px;padding:16px}
+.drop.over{background:var(--sel-hi)}
+.frame .busy{position:absolute;inset:0;display:grid;place-items:center;background:color-mix(in srgb,var(--cell) 80%,transparent);font-size:14px}
+.big-arrow{width:40px;height:12px;background:var(--line);position:relative;justify-self:center}
+.big-arrow::after{content:"";position:absolute;right:-10px;top:-8px;border:14px solid transparent;border-left:14px solid var(--line);border-right:0}
+.ctrl{display:grid;gap:10px;margin-top:14px}
+.ctrl label{display:flex;align-items:center;gap:10px;font-size:13px}
+.ctrl input[type=range]{flex:1;accent-color:var(--pink-lo)}
+.ctrl .hint{font-size:12px;color:var(--muted-bg);margin:0}
+.strip{display:flex;gap:8px;overflow-x:auto;padding:10px 2px 6px;margin-top:10px}
+.thumb{color:var(--text);flex:0 0 64px;height:64px;border:2px solid var(--line);background:var(--cell);padding:4px;position:relative}
+.thumb[aria-pressed="true"]{background:var(--sel)}
+.thumb img{width:100%;height:100%;object-fit:contain}
+.thumb .x{position:absolute;top:-8px;right:-8px;width:20px;height:20px;border:2px solid var(--line);background:#fff;color:#2A2533;font-size:11px;line-height:14px;padding:0}
+.thumb.add-more{display:grid;place-items:center;font-size:24px;cursor:pointer}
+.savebar{display:flex;justify-content:center;gap:12px;margin-top:16px}
+.err{color:var(--warn);font-size:12px;margin:0;text-align:center}
+
+/* match */
+.match{display:grid;grid-template-columns:minmax(0,470px) minmax(260px,380px);justify-content:center;gap:28px;align-items:start}
+.racks{display:grid;gap:14px}
+.rack-label{font-size:12px;color:var(--on-bg);margin:0 0 4px 40px}
+.stage-col{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px)}
+.stage{aspect-ratio:3/4;border:3px solid var(--line);background:var(--stage);position:relative;overflow:hidden;
+  box-shadow:inset 3px 3px 0 var(--cell-hi), inset -3px -3px 0 var(--cell-lo), 6px 6px 0 var(--line);touch-action:none}
+.stage .piece{position:absolute;transform:translateX(-50%);touch-action:none;cursor:grab;user-select:none;-webkit-user-drag:none;
+  filter:drop-shadow(0 4px 2px rgba(0,0,0,.18))}
+.stage .piece.sel{outline:2px dashed var(--pink-lo);outline-offset:2px}
+.stage .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:13px;padding:24px;pointer-events:none}
+.stage-tools{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.stage-tools .btn{padding:6px 10px;min-height:34px}
+@media (max-width:760px){
+  .match{grid-template-columns:1fr}
+  .stage-col{position:static;max-width:270px;width:100%;margin:0 auto;order:-1}
+  .stage-tools{margin-top:12px;gap:6px}
+  .logo{font-size:36px}
+}
+
+/* lookbook */
+.looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.look{color:var(--text);border:3px solid var(--line);background:var(--paper);padding:8px;display:grid;gap:8px}
+.look .stage{box-shadow:inset 2px 2px 0 var(--cell-hi), inset -2px -2px 0 var(--cell-lo);border-width:2px;cursor:pointer}
+.look .stage .piece{cursor:pointer}
+.look-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted)}
+.look-row button{border:2px solid var(--line);background:var(--cell-hi);font-size:12px;padding:2px 8px}
+
+/* toast + modal */
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);
+  background:var(--line);color:#fff;padding:10px 16px;border:2px solid var(--pink);font-size:13px;z-index:20;display:none;max-width:90vw;text-align:center}
+
+.toast.show{display:block}
+.modal{position:fixed;inset:0;background:rgba(20,16,26,.45);display:none;place-items:center;z-index:30;padding:20px}
+.modal.show{display:grid}
+.modal .box{max-width:320px;text-align:center;box-shadow:6px 6px 0 var(--line)}
+.modal p{margin:4px 0 14px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="bar">
+    <button class="sq" id="homeBtn" aria-label="처음 화면" hidden>
+      <svg viewBox="0 0 11 11" shape-rendering="crispEdges"><path fill="currentColor" d="M5 1h1v1h1v1h1v1h1v1h1v1H9v4H6V7H5v3H2V6H1V5h1V4h1V3h1V2h1z"/></svg>
+    </button>
+    <div class="mid"><span class="pill" id="title" hidden></span></div>
+    <div id="barRight"></div>
+  </div>
+
+  <!-- HOME -->
+  <section class="screen active" id="s-home">
+    <div class="home">
+      <svg class="hanger" viewBox="0 0 22 14" shape-rendering="crispEdges" aria-hidden="true">
+        <path fill="var(--line)" d="M10 0h3v1h1v3h-1v1h-1v1h1v1h2v1h2v1h2v1h2v3H0v-3h2V9h2V8h2V7h2V6h2V4h1V3h1V1h-2v1h-1V1h1z"/>
+        <path fill="var(--pink)" d="M3 10h16v2H3z"/>
+      </svg>
+      <h1 class="logo"><span>Dress Me</span></h1>
+      <p>내 옷 사진으로 하는 옷 입히기</p>
+      <div class="home-menu">
+        <button class="btn" data-go="ward" disabled>Wardrobe<small>옷장 열기</small></button>
+        <button class="btn" data-go="match" disabled>Match<small>코디해 보기</small></button>
+        <button class="btn grey" data-go="looks" disabled>Lookbook<small>저장한 코디</small></button>
+      </div>
+      <div class="mode" id="mode">옷장 여는 중…</div>
+    </div>
+  </section>
+
+  <!-- WARDROBE -->
+  <section class="screen" id="s-ward">
+    <div class="ward">
+      <div class="tabs" role="group" aria-label="종류">
+        <button class="tab" data-wtab="top" aria-pressed="true">상의</button>
+        <button class="tab" data-wtab="bottom" aria-pressed="false">하의</button>
+      </div>
+      <div class="shelf">
+        <button class="arrow prev" id="wPrev" aria-label="이전 칸"></button>
+        <div class="grid" id="wGrid"></div>
+        <button class="arrow" id="wNext" aria-label="다음 칸"></button>
+      </div>
+      <div class="pager" id="wPager"></div>
+      <div class="tools">
+        <button class="round" id="wAdd" aria-label="옷 추가">+</button>
+        <button class="round" id="wDel" aria-label="옷 지우기" aria-pressed="false">
+          <svg viewBox="0 0 10 10" shape-rendering="crispEdges"><path fill="currentColor" d="M3 0h4v1h3v1H0V1h3zM1 3h8v7H1zm2 1v5h1V4zm3 0v5h1V4z"/></svg>
+        </button>
+      </div>
+      <div id="wEmpty"></div>
+    </div>
+  </section>
+
+  <!-- ADD -->
+  <section class="screen" id="s-add">
+    <div class="add">
+      <div class="tabs" role="group" aria-label="이 옷의 종류">
+        <button class="tab" data-atab="top" aria-pressed="true">상의</button>
+        <button class="tab" data-atab="bottom" aria-pressed="false">하의</button>
+      </div>
+      <div class="compare">
+        <label class="frame drop" id="drop" for="file">
+          <span id="dropText">사진 고르기<br><small>바닥에 옷을 펼쳐 찍은 사진이 제일 잘 돼요</small></span>
+          <img id="origImg" alt="원본 사진" hidden>
+        </label>
+        <div class="big-arrow" aria-hidden="true"></div>
+        <div class="frame result" id="resFrame">
+          <img id="resImg" alt="배경을 지운 옷" hidden>
+          <div class="busy" id="busy" hidden>배경을 지우는 중~</div>
+        </div>
+      </div>
+      <input type="file" id="file" class="sr" accept="image/*" multiple>
+      <div class="ctrl" id="ctrl" hidden>
+        <label>배경 지우기 강도 <input type="range" id="tol" min="8" max="72" step="2" value="36"></label>
+        <p class="hint">옷이 같이 지워지면 왼쪽으로, 배경이 남으면 오른쪽으로 옮겨 보세요.</p>
+        <label><input type="checkbox" id="keepBg"> 배경 그대로 두기</label>
+        <p class="err" id="addErr"></p>
+      </div>
+      <div class="strip" id="strip" hidden></div>
+      <div class="savebar">
+        <button class="btn grey" id="addCancel">취소</button>
+        <button class="btn" id="addSave" disabled>저장</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATCH -->
+  <section class="screen" id="s-match">
+    <div class="match">
+      <div class="racks">
+        <div>
+          <p class="rack-label">상의</p>
+          <div class="shelf">
+            <button class="arrow prev" id="tPrev" aria-label="이전 상의"></button>
+            <div class="grid" id="tGrid"></div>
+            <button class="arrow" id="tNext" aria-label="다음 상의"></button>
+          </div>
+        </div>
+        <div>
+          <p class="rack-label">하의</p>
+          <div class="shelf">
+            <button class="arrow prev" id="bPrev" aria-label="이전 하의"></button>
+            <div class="grid" id="bGrid"></div>
+            <button class="arrow" id="bNext" aria-label="다음 하의"></button>
+          </div>
+        </div>
+      </div>
+      <div class="stage-col">
+        <div class="stage" id="stage"></div>
+        <div class="stage-tools">
+          <button class="btn grey" id="szDown" aria-label="선택한 옷 작게">−</button>
+          <button class="btn grey" id="szUp" aria-label="선택한 옷 크게">+</button>
+          <button class="btn grey" id="relayout">원위치</button>
+          <button class="btn grey" id="tuck" aria-pressed="false">넣입</button>
+          <button class="btn grey" id="rand">랜덤</button>
+          <button class="btn grey" id="clear">비우기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK -->
+  <section class="screen" id="s-looks">
+    <div class="looks" id="looks"></div>
+    <div id="looksEmpty"></div>
+  </section>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal" id="modal"><div class="box" role="dialog" aria-modal="true">
+  <p id="modalMsg"></p>
+  <div class="savebar" style="margin-top:0"><button class="btn grey" id="modalNo">취소</button><button class="btn" id="modalYes">지우기</button></div>
+</div></div>
+
+<script>
+// Flood-fill background removal tuned for clothes laid flat on a floor / bed / wall.
+// Input: Uint8ClampedArray RGBA, w, h, tol (5..80). Output: alpha Uint8ClampedArray (w*h)
+function removeBackground(data, w, h, tol) {
+  const N = w * h;
+  const alpha = new Uint8ClampedArray(N);
+  // Already transparent image? keep its own alpha.
+  let transparentBorder = 0, borderCount = 0;
+  for (let x = 0; x < w; x += 3) { borderCount += 2; if (data[(x) * 4 + 3] < 20) transparentBorder++; if (data[((h - 1) * w + x) * 4 + 3] < 20) transparentBorder++; }
+  if (transparentBorder > borderCount * 0.6) { for (let i = 0; i < N; i++) alpha[i] = data[i * 4 + 3]; return alpha; }
+
+  // 1. background palette: k-means (k=5) on border band pixels
+  const band = Math.max(2, Math.round(Math.min(w, h) * 0.02));
+  const samples = [];
+  const step = Math.max(1, Math.round((w + h) / 600));
+  const side = []; // 0 top,1 bottom,2 left,3 right
+  for (let y = 0; y < h; y += step) for (let x = 0; x < w; x += step) {
+    let sd = -1;
+    if (y < band) sd = 0; else if (y >= h - band) sd = 1; else if (x < band) sd = 2; else if (x >= w - band) sd = 3;
+    if (sd >= 0) { const i = (y * w + x) * 4; samples.push(data[i], data[i + 1], data[i + 2]); side.push(sd); }
+  }
+  const S = samples.length / 3, K = Math.min(5, S);
+  const cent = [];
+  for (let k = 0; k < K; k++) { const j = Math.floor((k + 0.5) / K * S) * 3; cent.push([samples[j], samples[j + 1], samples[j + 2]]); }
+  const assign = new Int32Array(S);
+  for (let it = 0; it < 8; it++) {
+    const sum = cent.map(() => [0, 0, 0, 0]);
+    for (let s = 0; s < S; s++) {
+      let best = 0, bd = 1e9;
+      for (let k = 0; k < K; k++) { const d = dist2(samples[s * 3], samples[s * 3 + 1], samples[s * 3 + 2], cent[k]); if (d < bd) { bd = d; best = k; } }
+      assign[s] = best; const a = sum[best]; a[0] += samples[s * 3]; a[1] += samples[s * 3 + 1]; a[2] += samples[s * 3 + 2]; a[3]++;
+    }
+    for (let k = 0; k < K; k++) if (sum[k][3]) cent[k] = [sum[k][0] / sum[k][3], sum[k][1] / sum[k][3], sum[k][2] / sum[k][3]];
+  }
+  // background = colours that show up on (almost) every side; a garment touching the frame shows up on one or two
+  const sideTot = [0, 0, 0, 0], per = cent.map(() => [0, 0, 0, 0]);
+  for (let s = 0; s < S; s++) { sideTot[side[s]]++; per[assign[s]][side[s]]++; }
+  const score = per.map(p => p.filter((n, sd) => sideTot[sd] && n / sideTot[sd] > 0.08).length);
+  let palette = cent.filter((c, k) => score[k] >= 3);
+  if (!palette.length) { const best = score.indexOf(Math.max(...score)); palette = [cent[best]]; }
+
+  // 2. per-pixel distance to the background palette
+  const dmin = new Float32Array(N);
+  for (let i = 0; i < N; i++) {
+    const r = data[i * 4], g = data[i * 4 + 1], b = data[i * 4 + 2];
+    let bd = 1e9; for (const c of palette) { const d = dist2(r, g, b, c); if (d < bd) bd = d; }
+    dmin[i] = Math.sqrt(bd);
+  }
+  // 3. flood fill from the border
+  const T = tol, local = tol * 0.45, hardCap = tol * 1.7;
+  const bg = new Uint8Array(N);
+  const q = new Int32Array(N); let qh = 0, qt = 0;
+  const push = (i) => { if (!bg[i]) { bg[i] = 1; q[qt++] = i; } };
+  for (let x = 0; x < w; x++) { if (dmin[x] < T) push(x); const j = (h - 1) * w + x; if (dmin[j] < T) push(j); }
+  for (let y = 0; y < h; y++) { const a = y * w, b = y * w + w - 1; if (dmin[a] < T) push(a); if (dmin[b] < T) push(b); }
+  while (qh < qt) {
+    const i = q[qh++], x = i % w, y = (i - x) / w;
+    const r = data[i * 4], g = data[i * 4 + 1], b = data[i * 4 + 2];
+    const nb = [x > 0 ? i - 1 : -1, x < w - 1 ? i + 1 : -1, y > 0 ? i - w : -1, y < h - 1 ? i + w : -1];
+    for (const j of nb) {
+      if (j < 0 || bg[j]) continue;
+      if (dmin[j] < T) { push(j); continue; }
+      if (dmin[j] < hardCap) { const dl = Math.sqrt(dist2(data[j * 4], data[j * 4 + 1], data[j * 4 + 2], [r, g, b])); if (dl < local) push(j); }
+    }
+  }
+  // 4. keep the main garment component(s); drop specks
+  const label = new Int32Array(N).fill(-1); const sizes = [];
+  for (let s = 0; s < N; s++) {
+    if (bg[s] || label[s] >= 0) continue;
+    const id = sizes.length; let size = 0; qh = 0; qt = 0; q[qt++] = s; label[s] = id;
+    while (qh < qt) {
+      const i = q[qh++]; size++; const x = i % w, y = (i - x) / w;
+      if (x > 0 && !bg[i - 1] && label[i - 1] < 0) { label[i - 1] = id; q[qt++] = i - 1; }
+      if (x < w - 1 && !bg[i + 1] && label[i + 1] < 0) { label[i + 1] = id; q[qt++] = i + 1; }
+      if (y > 0 && !bg[i - w] && label[i - w] < 0) { label[i - w] = id; q[qt++] = i - w; }
+      if (y < h - 1 && !bg[i + w] && label[i + w] < 0) { label[i + w] = id; q[qt++] = i + w; }
+    }
+    sizes.push(size);
+  }
+  const largest = sizes.length ? Math.max(...sizes) : 0;
+  const keep = sizes.map(s => s >= largest * 0.06);
+  const fg = new Uint8Array(N);
+  for (let i = 0; i < N; i++) fg[i] = (!bg[i] && keep[label[i]]) ? 1 : 0;
+  // 5. 1px erosion to cut the halo, then soften edges
+  const er = new Uint8Array(N);
+  for (let y = 1; y < h - 1; y++) for (let x = 1; x < w - 1; x++) {
+    const i = y * w + x; er[i] = fg[i] && fg[i - 1] && fg[i + 1] && fg[i - w] && fg[i + w] ? 1 : 0;
+  }
+  for (let y = 1; y < h - 1; y++) for (let x = 1; x < w - 1; x++) {
+    const i = y * w + x;
+    const s = er[i] * 4 + er[i - 1] + er[i + 1] + er[i - w] + er[i + w] + (er[i - w - 1] + er[i - w + 1] + er[i + w - 1] + er[i + w + 1]) * 0.5;
+    alpha[i] = Math.round(s / 10 * 255);
+  }
+  return alpha;
+}
+function dist2(r, g, b, c) {
+  // "redmean" weighted RGB distance, close to perceptual for cheap
+  const rm = (r + c[0]) / 2, dr = r - c[0], dg = g - c[1], db = b - c[2];
+  return ((512 + rm) * dr * dr) / 256 / 3 + (4 * dg * dg) / 3 + ((767 - rm) * db * db) / 256 / 3;
+}
+function alphaBBox(alpha, w, h) {
+  let x0 = w, y0 = h, x1 = -1, y1 = -1;
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) if (alpha[y * w + x] > 24) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+  if (x1 < 0) return null;
+  return { x: x0, y: y0, w: x1 - x0 + 1, h: y1 - y0 + 1 };
+}
+
+
+</script>
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const PER_PAGE = 12;
+const STAGE_R = 4 / 3; // stage height / width
+const rid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+
+/* ---------- storage: synced (artifact db + assets) or this device (IndexedDB) ---------- */
+class LocalStore {
+  constructor() { this.kind = "local"; this.db = null; }
+  async init() {
+    try {
+      this.db = await new Promise((res, rej) => {
+        const r = indexedDB.open("okjang-sim", 1);
+        r.onupgradeneeded = () => { const d = r.result; d.createObjectStore("items", { keyPath: "id" }); d.createObjectStore("outfits", { keyPath: "id" }); };
+        r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+      });
+    } catch (e) { console.warn("IndexedDB unavailable", e); this.db = null; this.kind = "memory"; }
+    const items = (await this._all("items")).map(r => ({ id: r.id, cat: r.cat, ar: r.ar, created: r.created, src: URL.createObjectURL(r.blob) }));
+    const outfits = await this._all("outfits");
+    return { items, outfits };
+  }
+  _tx(store, mode, fn) {
+    if (!this.db) return Promise.resolve(null);
+    return new Promise((res, rej) => {
+      try { const t = this.db.transaction(store, mode); const r = fn(t.objectStore(store)); t.oncomplete = () => res(r && r.result); t.onerror = () => rej(t.error); }
+      catch (e) { rej(e); }
+    });
+  }
+  async _all(store) { try { return (await this._tx(store, "readonly", s => s.getAll())) || []; } catch { return []; } }
+  async addItem(cat, blob, ar) {
+    const rec = { id: "item_" + rid(), cat, ar, created: Date.now(), blob };
+    await this._tx("items", "readwrite", s => s.put(rec));
+    return { id: rec.id, cat, ar, created: rec.created, src: URL.createObjectURL(blob) };
+  }
+  async deleteItem(item) { await this._tx("items", "readwrite", s => s.delete(item.id)); }
+  async addOutfit(o) { await this._tx("outfits", "readwrite", s => s.put(o)); return o; }
+  async deleteOutfit(o) { await this._tx("outfits", "readwrite", s => s.delete(o.id)); }
+}
+
+class CloudStore {
+  constructor(db, assets, uid) { this.kind = "cloud"; this.assets = assets; this.col = db.collection("data/users/" + uid); }
+  async init() {
+    const snap = await this.col.get();
+    const items = [], outfits = [];
+    for (const d of snap.docs) {
+      const v = d.data(); if (!v) continue;
+      if (v.kind === "item") items.push({ id: d.id, cat: v.cat, ar: v.ar, created: v.created, asset: v.asset, src: "/_blob/" + v.asset });
+      else if (v.kind === "outfit") outfits.push({ ...v, id: d.id, t: v.t ? JSON.parse(JSON.stringify(v.t)) : null });
+    }
+    return { items, outfits };
+  }
+  async addItem(cat, blob, ar) {
+    const type = blob.type === "image/webp" ? "image/webp" : "image/png";
+    const up = await this.assets.upload(blob, { type });
+    const id = "item_" + rid(), created = Date.now();
+    await this.col.doc(id).set({ kind: "item", cat, ar, created, asset: up.id });
+    return { id, cat, ar, created, asset: up.id, src: up.url };
+  }
+  async deleteItem(item) {
+    await this.col.doc(item.id).delete();
+    if (item.asset) { try { await this.assets.delete(item.asset); } catch (e) { console.warn(e); } }
+  }
+  async addOutfit(o) { const { id, ...rest } = o; await this.col.doc(id).set({ kind: "outfit", ...rest }); return o; }
+  async deleteOutfit(o) { await this.col.doc(o.id).delete(); }
+}
+
+async function pickStore() {
+  if (window.claude && typeof window.claude.use === "function") {
+    try {
+      const [db, assets, user] = await Promise.all([claude.use("db"), claude.use("assets"), claude.use("user")]);
+      if (db && assets && user) {
+        const uid = await user.id();
+        if (uid) { const cs = new CloudStore(db, assets, uid); const data = await cs.init(); return { store: cs, data }; }
+      }
+    } catch (e) { console.warn("sync unavailable, using this device", e); }
+  }
+  const ls = new LocalStore(); const data = await ls.init(); return { store: ls, data };
+}
+
+/* ---------- state ---------- */
+const S = {
+  store: null, items: [], outfits: [],
+  wTab: "top", wPage: 0, deleting: false,
+  pending: [], cur: -1,
+  m: { top: null, bottom: null, t: null, tuck: false, sel: "top", tPage: 0, bPage: 0 },
+};
+const byId = id => S.items.find(i => i.id === id);
+const ofCat = cat => S.items.filter(i => i.cat === cat).sort((a, b) => a.created - b.created);
+
+/* ---------- ui helpers ---------- */
+let toastT;
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("show"), 2600); }
+function ask(msg, yes = "지우기") {
+  return new Promise(res => {
+    const m = $("#modal"); $("#modalMsg").textContent = msg; $("#modalYes").textContent = yes; m.classList.add("show"); $("#modalNo").focus();
+    const done = v => { m.classList.remove("show"); $("#modalYes").onclick = $("#modalNo").onclick = null; res(v); };
+    $("#modalYes").onclick = () => done(true); $("#modalNo").onclick = () => done(false);
+  });
+}
+function errMsg(e) {
+  const c = e && e.code;
+  if (c === "quota_or_state" || c === "quota_exceeded") return "저장 공간이 꽉 찼어요. 안 입는 옷을 지운 뒤 다시 해 보세요.";
+  if (c === "too_large") return "사진이 너무 커요. 더 작은 사진으로 해 보세요.";
+  if (c === "rate_limited" || c === "resource_exhausted") return "잠깐 쉬었다가 다시 저장해 주세요.";
+  return "저장하지 못했어요. 잠시 뒤 다시 해 보세요.";
+}
+
+/* ---------- navigation ---------- */
+const TITLES = { ward: "Wardrobe", add: "Add", match: "MATCH", looks: "Lookbook" };
+function go(name) {
+  $$(".screen").forEach(s => s.classList.toggle("active", s.id === "s-" + name));
+  $("#homeBtn").hidden = name === "home";
+  const t = $("#title"); t.hidden = name === "home"; t.textContent = TITLES[name] || "";
+  const right = $("#barRight"); right.innerHTML = "";
+  if (name === "match") {
+    const b = document.createElement("button"); b.className = "btn"; b.textContent = "SAVE"; b.onclick = saveOutfit; right.append(b);
+  }
+  if (name === "looks" || name === "ward") {
+    const b = document.createElement("button"); b.className = "btn grey"; b.textContent = "MATCH";
+    b.onclick = () => go("match"); right.append(b);
+  }
+  if (name !== "ward") setDeleting(false);
+  if (name === "home") renderHome();
+  if (name === "ward") renderWard();
+  if (name === "match") renderMatch();
+  if (name === "looks") renderLooks();
+  if (name === "add") renderAdd();
+  window.scrollTo(0, 0);
+}
+$("#homeBtn").onclick = () => {
+  if ($("#s-add").classList.contains("active") && S.pending.length) { go("ward"); return; }
+  go("home");
+};
+$$("[data-go]").forEach(b => b.onclick = () => go(b.dataset.go));
+
+function renderHome() {
+  const t = ofCat("top").length, b = ofCat("bottom").length;
+  const where = S.store ? (S.store.kind === "cloud" ? "계정에 저장돼서 다른 기기에서도 열려요." : S.store.kind === "local" ? "이 브라우저에 저장돼요." : "이 브라우저는 저장을 막고 있어서, 창을 닫으면 사라져요.") : "";
+  $("#mode").textContent = S.store ? `상의 ${t}벌, 하의 ${b}벌. ${where}` : "옷장 여는 중…";
+}
+
+/* ---------- grids ---------- */
+function renderGrid(el, list, page, opts) {
+  el.innerHTML = "";
+  const start = page * PER_PAGE;
+  for (let k = 0; k < PER_PAGE; k++) {
+    const it = list[start + k];
+    const c = document.createElement("button");
+    c.className = "cell" + (it ? "" : " empty");
+    if (!it) { c.tabIndex = -1; c.setAttribute("aria-hidden", "true"); el.append(c); continue; }
+    c.setAttribute("aria-pressed", String(opts.selected === it.id));
+    c.setAttribute("aria-label", (it.cat === "top" ? "상의 " : "하의 ") + (start + k + 1));
+    const img = new Image(); img.src = it.src; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
+    img.onerror = () => { img.replaceWith(Object.assign(document.createElement("span"), { textContent: "?" })); };
+    c.append(img);
+    if (opts.del) { const x = document.createElement("span"); x.className = "x"; x.textContent = "✕"; x.setAttribute("aria-hidden", "true"); c.append(x); }
+    c.onclick = () => opts.onPick(it);
+    el.append(c);
+  }
+}
+function pages(n) { return Math.max(1, Math.ceil(n / PER_PAGE)); }
+function wirePager(prev, next, getPage, setPage, total) {
+  const p = getPage(), n = pages(total);
+  prev.disabled = p <= 0; next.disabled = p >= n - 1;
+  prev.onclick = () => { if (getPage() > 0) { setPage(getPage() - 1); } };
+  next.onclick = () => { if (getPage() < pages(total) - 1) { setPage(getPage() + 1); } };
+}
+
+/* ---------- wardrobe ---------- */
+function setDeleting(on) { S.deleting = on; $("#wDel").classList.toggle("on", on); $("#wDel").setAttribute("aria-pressed", String(on)); $("#wGrid").classList.toggle("deleting", on); }
+function renderWard() {
+  $$("[data-wtab]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.wtab === S.wTab)));
+  const list = ofCat(S.wTab);
+  S.wPage = Math.min(S.wPage, pages(list.length) - 1);
+  renderGrid($("#wGrid"), list, S.wPage, { del: true, onPick: async it => {
+    if (!S.deleting) { S.m[it.cat] = it.id; S.m.sel = it.cat; S.m.t = autoLayout(byId(S.m.top), byId(S.m.bottom)); go("match"); return; }
+    const used = S.outfits.filter(o => o.top === it.id || o.bottom === it.id).length;
+    const ok = await ask(used ? `이 옷을 지울까요? 이 옷이 들어간 코디 ${used}개도 함께 지워져요.` : "이 옷을 옷장에서 지울까요?");
+    if (!ok) return;
+    try {
+      for (const o of S.outfits.filter(o => o.top === it.id || o.bottom === it.id)) { await S.store.deleteOutfit(o); }
+      S.outfits = S.outfits.filter(o => o.top !== it.id && o.bottom !== it.id);
+      await S.store.deleteItem(it);
+      S.items = S.items.filter(i => i !== it);
+      if (S.m.top === it.id) S.m.top = null;
+      if (S.m.bottom === it.id) S.m.bottom = null;
+      renderWard(); toast("지웠어요");
+    } catch (e) { console.warn(e); toast("지우지 못했어요. 잠시 뒤 다시 해 보세요."); }
+  }});
+  wirePager($("#wPrev"), $("#wNext"), () => S.wPage, p => { S.wPage = p; renderWard(); }, list.length);
+  $("#wPager").textContent = list.length ? `${S.wPage + 1} / ${pages(list.length)}  (${list.length}벌)` : "";
+  const em = $("#wEmpty"); em.innerHTML = "";
+  if (!S.items.length) {
+    em.innerHTML = `<p class="empty-note">옷장이 비어 있어요. + 를 눌러 옷 사진을 넣거나, 샘플 옷으로 먼저 놀아 보세요.</p>
+      <div class="savebar"><button class="btn grey" id="sampleBtn">샘플 옷 6벌 넣기</button></div>`;
+    $("#sampleBtn").onclick = addSamples;
+  } else if (!list.length) {
+    em.innerHTML = `<p class="empty-note">${S.wTab === "top" ? "상의" : "하의"}가 아직 없어요. + 를 눌러 추가하세요.</p>`;
+  }
+}
+$$("[data-wtab]").forEach(b => b.onclick = () => { S.wTab = b.dataset.wtab; S.wPage = 0; renderWard(); });
+$("#wDel").onclick = () => { setDeleting(!S.deleting); if (S.deleting) toast("지울 옷을 누르세요"); };
+$("#wAdd").onclick = () => { S.addCat = S.wTab; go("add"); if (!S.pending.length) $("#file").click(); };
+
+/* ---------- add: photo -> background removed cutout ---------- */
+S.addCat = "top";
+const MAX_IN = 1000, MAX_OUT = 640;
+async function decode(file) {
+  try { return await createImageBitmap(file, { imageOrientation: "from-image" }); } catch {}
+  try { return await createImageBitmap(file); } catch {}
+  return await new Promise((res, rej) => {
+    const u = URL.createObjectURL(file), im = new Image();
+    im.onload = () => res(im); im.onerror = () => rej(new Error("decode")); im.src = u;
+  });
+}
+function canvasBlob(cv) {
+  return new Promise(res => cv.toBlob(b => {
+    if (b && b.type === "image/webp") res(b); else cv.toBlob(p => res(p), "image/png");
+  }, "image/webp", 0.9));
+}
+async function ingest(files) {
+  const imgs = [...files].filter(f => !f.type || f.type.startsWith("image/") || /\.(heic|heif)$/i.test(f.name));
+  if (!imgs.length) return;
+  let bad = 0;
+  for (const f of imgs) {
+    try {
+      const bmp = await decode(f);
+      const w0 = bmp.width || bmp.naturalWidth, h0 = bmp.height || bmp.naturalHeight;
+      const sc = Math.min(1, MAX_IN / Math.max(w0, h0));
+      const w = Math.max(1, Math.round(w0 * sc)), h = Math.max(1, Math.round(h0 * sc));
+      const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+      const cx = cv.getContext("2d", { willReadFrequently: true }); cx.drawImage(bmp, 0, 0, w, h);
+      const origURL = URL.createObjectURL(await new Promise(r => cv.toBlob(r, "image/jpeg", 0.85)));
+      S.pending.push({ id: rid(), cat: S.addCat, w, h, data: cx.getImageData(0, 0, w, h), origURL, tol: 36, keepBg: false, out: null, err: "", busy: false });
+    } catch (e) { bad++; }
+  }
+  if (bad) toast(`${bad}장은 열 수 없는 형식이에요. JPG나 PNG로 올려 주세요.`);
+  if (S.cur < 0 && S.pending.length) S.cur = 0;
+  renderAdd();
+  for (const p of S.pending) if (!p.out && !p.busy) await processEntry(p);
+}
+function processEntry(p) {
+  p.busy = true; p.err = ""; renderAdd();
+  return new Promise(resolve => setTimeout(async () => {
+    try {
+      const { w, h } = p;
+      let src = document.createElement("canvas"); src.width = w; src.height = h;
+      const sx = src.getContext("2d");
+      let box = { x: 0, y: 0, w, h };
+      if (p.keepBg) { sx.putImageData(p.data, 0, 0); }
+      else {
+        const alpha = removeBackground(p.data.data, w, h, p.tol);
+        const bb = alphaBBox(alpha, w, h);
+        if (!bb || bb.w * bb.h < w * h * 0.01) throw new Error("nothing");
+        const id = new ImageData(new Uint8ClampedArray(p.data.data), w, h);
+        for (let i = 0; i < w * h; i++) id.data[i * 4 + 3] = Math.min(id.data[i * 4 + 3], alpha[i]);
+        sx.putImageData(id, 0, 0);
+        const pad = Math.round(Math.max(bb.w, bb.h) * 0.02);
+        box = { x: Math.max(0, bb.x - pad), y: Math.max(0, bb.y - pad) };
+        box.w = Math.min(w, bb.x + bb.w + pad) - box.x; box.h = Math.min(h, bb.y + bb.h + pad) - box.y;
+      }
+      const sc = Math.min(1, MAX_OUT / Math.max(box.w, box.h));
+      const out = document.createElement("canvas"); out.width = Math.round(box.w * sc); out.height = Math.round(box.h * sc);
+      const ox = out.getContext("2d"); ox.imageSmoothingQuality = "high";
+      ox.drawImage(src, box.x, box.y, box.w, box.h, 0, 0, out.width, out.height);
+      const blob = await canvasBlob(out);
+      if (p.out) URL.revokeObjectURL(p.out.url);
+      p.out = { blob, url: URL.createObjectURL(blob), ar: out.height / out.width };
+    } catch (e) {
+      p.out = null; p.err = "옷을 찾지 못했어요. 강도를 왼쪽으로 옮기거나 ‘배경 그대로 두기’를 켜 보세요.";
+    }
+    p.busy = false; renderAdd(); resolve();
+  }, 30));
+}
+function renderAdd() {
+  const p = S.pending[S.cur];
+  const cat = p ? p.cat : S.addCat;
+  $$("[data-atab]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.atab === cat)));
+  const drop = $("#drop"), oi = $("#origImg"), ri = $("#resImg");
+  drop.classList.toggle("drop", !p);
+  $("#dropText").hidden = !!p; oi.hidden = !p; if (p) oi.src = p.origURL;
+  ri.hidden = !(p && p.out); if (p && p.out) ri.src = p.out.url;
+  $("#busy").hidden = !(p && p.busy);
+  $("#ctrl").hidden = !p;
+  if (p) { $("#tol").value = p.tol; $("#tol").disabled = p.keepBg; $("#keepBg").checked = p.keepBg; $("#addErr").textContent = p.err; }
+  const strip = $("#strip"); strip.hidden = !S.pending.length; strip.innerHTML = "";
+  S.pending.forEach((q, i) => {
+    const b = document.createElement("div"); b.className = "thumb"; b.setAttribute("role", "button"); b.tabIndex = 0;
+    b.setAttribute("aria-pressed", String(i === S.cur)); b.setAttribute("aria-label", `사진 ${i + 1}`);
+    const im = new Image(); im.src = q.out ? q.out.url : q.origURL; im.alt = ""; b.append(im);
+    const x = document.createElement("button"); x.className = "x"; x.textContent = "✕"; x.setAttribute("aria-label", `사진 ${i + 1} 빼기`);
+    x.onclick = ev => { ev.stopPropagation(); S.pending.splice(i, 1); if (S.cur >= S.pending.length) S.cur = S.pending.length - 1; renderAdd(); };
+    b.append(x);
+    b.onclick = () => { S.cur = i; renderAdd(); };
+    b.onkeydown = ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); S.cur = i; renderAdd(); } };
+    strip.append(b);
+  });
+  if (S.pending.length) {
+    const more = document.createElement("label"); more.className = "thumb add-more"; more.htmlFor = "file"; more.textContent = "+"; more.setAttribute("aria-label", "사진 더 고르기");
+    strip.append(more);
+  }
+  const ready = S.pending.filter(q => q.out).length;
+  const sv = $("#addSave"); sv.disabled = !ready || S.pending.some(q => q.busy); sv.textContent = ready ? `저장 (${ready})` : "저장";
+}
+$$("[data-atab]").forEach(b => b.onclick = () => { const p = S.pending[S.cur]; if (p) p.cat = b.dataset.atab; else S.addCat = b.dataset.atab; renderAdd(); });
+$("#file").onchange = e => { const f = e.target.files; ingest(f); e.target.value = ""; };
+const drop = $("#drop");
+["dragenter", "dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+["dragleave", "drop"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove("over"); }));
+drop.addEventListener("drop", e => ingest(e.dataTransfer.files));
+drop.addEventListener("click", e => { if (S.pending.length) e.preventDefault(); });
+let tolT;
+$("#tol").oninput = e => { const p = S.pending[S.cur]; if (!p) return; p.tol = +e.target.value; clearTimeout(tolT); tolT = setTimeout(() => processEntry(p), 200); };
+$("#keepBg").onchange = e => { const p = S.pending[S.cur]; if (!p) return; p.keepBg = e.target.checked; processEntry(p); };
+$("#addCancel").onclick = () => { S.pending = []; S.cur = -1; go("ward"); };
+$("#addSave").onclick = async () => {
+  const ready = S.pending.filter(q => q.out);
+  const sv = $("#addSave"); sv.disabled = true;
+  let done = 0, lastCat = null;
+  for (const q of ready) {
+    sv.textContent = `저장 중 ${done + 1}/${ready.length}`;
+    try {
+      const it = await S.store.addItem(q.cat, q.out.blob, q.out.ar);
+      S.items.push(it); done++; lastCat = q.cat;
+      S.pending.splice(S.pending.indexOf(q), 1);
+    } catch (e) { console.warn(e); toast(errMsg(e)); break; }
+  }
+  S.cur = S.pending.length ? 0 : -1;
+  if (done) {
+    toast(`옷장에 ${done}벌 넣었어요`);
+    if (!S.pending.length) { S.wTab = lastCat; S.wPage = pages(ofCat(lastCat).length) - 1; go("ward"); return; }
+  }
+  renderAdd();
+};
+
+/* ---------- samples (simple drawings so the game works before any photo) ---------- */
+const SAMPLE_SVGS = [
+  ["top", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 210"><defs><pattern id="s" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#f4f1ea"/><rect width="20" height="9" fill="#2d3a5c"/></pattern></defs><path d="M62 14 L86 6 Q100 20 114 6 L138 14 L192 58 L170 92 L148 76 L148 204 L52 204 L52 76 L30 92 L8 58 Z" fill="url(#s)" stroke="#222" stroke-width="3" stroke-linejoin="round"/><path d="M86 6 Q100 20 114 6" fill="none" stroke="#222" stroke-width="3"/></svg>`],
+  ["top", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 230"><path d="M70 30 Q110 -6 150 30 L196 60 L216 196 L188 200 L172 100 L166 222 L54 222 L48 100 L32 200 L4 196 L24 60 Z" fill="#e48aa8" stroke="#222" stroke-width="3" stroke-linejoin="round"/><path d="M78 34 Q110 70 142 34 Q110 8 78 34Z" fill="#c9668c" stroke="#222" stroke-width="3"/><path d="M76 150 H144 L152 196 H68 Z" fill="none" stroke="#222" stroke-width="3"/><path d="M100 60 V96 M120 60 V96" stroke="#fff" stroke-width="3"/></svg>`],
+  ["top", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 230"><path d="M72 18 L92 10 L110 26 L128 10 L148 18 L194 50 L214 200 L186 204 L170 96 L168 222 L52 222 L50 96 L34 204 L6 200 L26 50 Z" fill="#9ec3e6" stroke="#222" stroke-width="3" stroke-linejoin="round"/><path d="M92 10 L110 26 L98 40 L84 22 Z M128 10 L110 26 L122 40 L136 22 Z" fill="#dcecf8" stroke="#222" stroke-width="3" stroke-linejoin="round"/><path d="M110 26 V222" stroke="#222" stroke-width="2"/><g fill="#fff" stroke="#222" stroke-width="2"><circle cx="116" cy="60" r="4"/><circle cx="116" cy="100" r="4"/><circle cx="116" cy="140" r="4"/><circle cx="116" cy="180" r="4"/></g></svg>`],
+  ["bottom", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 240"><path d="M28 8 H132 L150 232 H96 L80 78 L64 232 H10 Z" fill="#3e6aa8" stroke="#222" stroke-width="3" stroke-linejoin="round"/><path d="M28 24 H132" stroke="#222" stroke-width="3"/><path d="M80 24 V70" stroke="#e9c46a" stroke-width="2" stroke-dasharray="5 4"/><path d="M36 40 Q50 52 64 40 M96 40 Q110 52 124 40" fill="none" stroke="#e9c46a" stroke-width="2"/></svg>`],
+  ["bottom", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 190"><path d="M56 8 H144 L190 180 H10 Z" fill="#8a5a3c" stroke="#222" stroke-width="3" stroke-linejoin="round"/><path d="M56 22 H144" stroke="#222" stroke-width="3"/><g stroke="#5e3b26" stroke-width="2.5"><path d="M70 22 L42 180"/><path d="M86 22 L76 180"/><path d="M100 22 V180"/><path d="M114 22 L124 180"/><path d="M130 22 L158 180"/></g></svg>`],
+  ["bottom", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140"><path d="M38 8 H162 L184 128 L112 134 L100 66 L88 134 L16 128 Z" fill="#26232b" stroke="#111" stroke-width="3" stroke-linejoin="round"/><path d="M38 24 H162" stroke="#555" stroke-width="3"/></svg>`],
+];
+async function svgToBlob(svg) {
+  const url = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+  const im = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; });
+  const vb = svg.match(/viewBox="0 0 (\d+) (\d+)"/); const vw = +vb[1], vh = +vb[2];
+  const cv = document.createElement("canvas"); cv.width = 400; cv.height = Math.round(400 * vh / vw);
+  cv.getContext("2d").drawImage(im, 0, 0, cv.width, cv.height);
+  return { blob: await new Promise(r => cv.toBlob(r, "image/png")), ar: cv.height / cv.width };
+}
+async function addSamples() {
+  const btn = $("#sampleBtn"); if (btn) { btn.disabled = true; btn.textContent = "넣는 중…"; }
+  try {
+    for (const [cat, svg] of SAMPLE_SVGS) { const { blob, ar } = await svgToBlob(svg); S.items.push(await S.store.addItem(cat, blob, ar)); }
+    toast("샘플 옷 6벌을 넣었어요. 필요 없으면 휴지통으로 지우세요.");
+  } catch (e) { console.warn(e); toast(errMsg(e)); }
+  renderWard();
+}
+
+/* ---------- match ---------- */
+function autoLayout(top, bottom) {
+  const R = STAGE_R, t = {};
+  if (top && bottom) {
+    const aT = top.ar || 1, aB = bottom.ar || 1.2;
+    let wT = 0.74, wB = 0.56;
+    const hT = wT * aT / R, hB = wB * aB / R, overlap = 0.8;
+    const total = overlap * hT + hB, k = Math.min(1, 0.92 / total);
+    const y0 = (1 - k * total) / 2;
+    t.top = { x: 0.5, y: y0, w: wT * k };
+    t.bottom = { x: 0.5, y: y0 + overlap * hT * k, w: wB * k };
+  } else if (top) {
+    const a = top.ar || 1; const w = Math.min(0.78, 0.8 * R / a); t.top = { x: 0.5, y: (1 - w * a / R) / 2, w };
+  } else if (bottom) {
+    const a = bottom.ar || 1.2; const w = Math.min(0.6, 0.86 * R / a); t.bottom = { x: 0.5, y: (1 - w * a / R) / 2, w };
+  }
+  return t;
+}
+function drawStage(el, o, interactive) {
+  el.innerHTML = "";
+  const parts = o.tuck ? ["top", "bottom"] : ["bottom", "top"]; // later = in front
+  let any = false;
+  for (const part of parts) {
+    const it = o[part] && byId(o[part]); const tr = o.t && o.t[part];
+    if (!it || !tr) continue;
+    any = true;
+    const img = new Image(); img.src = it.src; img.alt = part === "top" ? "상의" : "하의"; img.draggable = false;
+    img.className = "piece" + (interactive && S.m.sel === part ? " sel" : "");
+    img.dataset.part = part;
+    img.style.left = tr.x * 100 + "%"; img.style.top = tr.y * 100 + "%"; img.style.width = tr.w * 100 + "%";
+    if (interactive) img.addEventListener("pointerdown", startDrag);
+    el.append(img);
+  }
+  if (!any && interactive) {
+    el.innerHTML = `<div class="ph">${S.items.length ? "왼쪽에서 상의와 하의를 골라 보세요.<br>입힌 옷은 끌어서 옮길 수 있어요." : "옷장이 비어 있어요.<br>옷장에서 옷을 먼저 넣어 주세요."}</div>`;
+  }
+}
+let drag = null;
+function startDrag(e) {
+  const part = e.currentTarget.dataset.part;
+  S.m.sel = part; $$("#stage .piece").forEach(p => p.classList.toggle("sel", p.dataset.part === part));
+  const r = $("#stage").getBoundingClientRect(), tr = S.m.t[part];
+  drag = { part, el: e.currentTarget, x: e.clientX, y: e.clientY, x0: tr.x, y0: tr.y, rw: r.width, rh: r.height };
+  e.currentTarget.setPointerCapture(e.pointerId);
+  e.currentTarget.addEventListener("pointermove", moveDrag);
+  e.currentTarget.addEventListener("pointerup", endDrag, { once: true });
+  e.currentTarget.addEventListener("pointercancel", endDrag, { once: true });
+  e.preventDefault();
+}
+function moveDrag(e) {
+  if (!drag) return;
+  const tr = S.m.t[drag.part];
+  tr.x = Math.min(1, Math.max(0, drag.x0 + (e.clientX - drag.x) / drag.rw));
+  tr.y = Math.min(0.95, Math.max(-0.6, drag.y0 + (e.clientY - drag.y) / drag.rh));
+  drag.el.style.left = tr.x * 100 + "%"; drag.el.style.top = tr.y * 100 + "%";
+}
+function endDrag(e) { if (drag) { drag.el.removeEventListener("pointermove", moveDrag); drag = null; } }
+
+function setPiece(part, id) {
+  S.m[part] = S.m[part] === id ? null : id;
+  if (S.m[part]) S.m.sel = part;
+  else if (S.m.sel === part) S.m.sel = part === "top" ? "bottom" : "top";
+  S.m.t = autoLayout(byId(S.m.top), byId(S.m.bottom));
+  renderMatch();
+}
+function renderMatch() {
+  const tops = ofCat("top"), bots = ofCat("bottom");
+  S.m.tPage = Math.min(S.m.tPage, pages(tops.length) - 1);
+  S.m.bPage = Math.min(S.m.bPage, pages(bots.length) - 1);
+  if (S.m.top && !byId(S.m.top)) S.m.top = null;
+  if (S.m.bottom && !byId(S.m.bottom)) S.m.bottom = null;
+  if (!S.m.t) S.m.t = autoLayout(byId(S.m.top), byId(S.m.bottom));
+  renderGrid($("#tGrid"), tops, S.m.tPage, { selected: S.m.top, onPick: it => setPiece("top", it.id) });
+  renderGrid($("#bGrid"), bots, S.m.bPage, { selected: S.m.bottom, onPick: it => setPiece("bottom", it.id) });
+  wirePager($("#tPrev"), $("#tNext"), () => S.m.tPage, p => { S.m.tPage = p; renderMatch(); }, tops.length);
+  wirePager($("#bPrev"), $("#bNext"), () => S.m.bPage, p => { S.m.bPage = p; renderMatch(); }, bots.length);
+  drawStage($("#stage"), S.m, true);
+  const tk = $("#tuck"); tk.classList.toggle("on", S.m.tuck); tk.setAttribute("aria-pressed", String(S.m.tuck));
+  const has = S.m.top || S.m.bottom;
+  ["#szDown", "#szUp", "#relayout", "#clear"].forEach(s => $(s).disabled = !has);
+  $("#rand").disabled = !S.items.length;
+}
+function resize(f) {
+  const part = S.m.t[S.m.sel] ? S.m.sel : (S.m.t.top ? "top" : "bottom");
+  const tr = S.m.t[part], it = byId(S.m[part]); if (!tr || !it) return;
+  const a = it.ar || 1, h0 = tr.w * a / STAGE_R;
+  tr.w = Math.min(1.6, Math.max(0.15, tr.w * f));
+  tr.y += (h0 - tr.w * a / STAGE_R) / 2;
+  S.m.sel = part; drawStage($("#stage"), S.m, true);
+}
+$("#szDown").onclick = () => resize(1 / 1.08);
+$("#szUp").onclick = () => resize(1.08);
+$("#relayout").onclick = () => { S.m.t = autoLayout(byId(S.m.top), byId(S.m.bottom)); drawStage($("#stage"), S.m, true); };
+$("#tuck").onclick = () => { S.m.tuck = !S.m.tuck; renderMatch(); toast(S.m.tuck ? "상의를 하의 안으로 넣었어요" : "상의를 밖으로 뺐어요"); };
+$("#clear").onclick = () => { S.m.top = S.m.bottom = null; S.m.t = {}; renderMatch(); };
+$("#rand").onclick = () => {
+  const pick = (list, cur) => { if (!list.length) return null; if (list.length === 1) return list[0].id; let x; do { x = list[Math.floor(Math.random() * list.length)].id; } while (x === cur); return x; };
+  const tops = ofCat("top"), bots = ofCat("bottom");
+  S.m.top = pick(tops, S.m.top); S.m.bottom = pick(bots, S.m.bottom);
+  const ti = tops.findIndex(i => i.id === S.m.top), bi = bots.findIndex(i => i.id === S.m.bottom);
+  if (ti >= 0) S.m.tPage = Math.floor(ti / PER_PAGE); if (bi >= 0) S.m.bPage = Math.floor(bi / PER_PAGE);
+  S.m.t = autoLayout(byId(S.m.top), byId(S.m.bottom)); renderMatch();
+};
+async function saveOutfit() {
+  if (!S.m.top && !S.m.bottom) { toast("먼저 옷을 하나 이상 골라 주세요"); return; }
+  const o = { id: "outfit_" + rid(), top: S.m.top, bottom: S.m.bottom, t: JSON.parse(JSON.stringify(S.m.t)), tuck: S.m.tuck, created: Date.now() };
+  try { await S.store.addOutfit(o); S.outfits.push(o); toast("룩북에 저장했어요"); }
+  catch (e) { console.warn(e); toast(errMsg(e)); }
+}
+
+/* ---------- lookbook ---------- */
+function renderLooks() {
+  const box = $("#looks"); box.innerHTML = "";
+  const list = [...S.outfits].sort((a, b) => b.created - a.created);
+  for (const o of list) {
+    const card = document.createElement("div"); card.className = "look";
+    const st = document.createElement("div"); st.className = "stage"; st.setAttribute("role", "button"); st.tabIndex = 0;
+    st.setAttribute("aria-label", "이 코디 다시 열기");
+    drawStage(st, o, false);
+    const open = () => { Object.assign(S.m, { top: o.top, bottom: o.bottom, t: JSON.parse(JSON.stringify(o.t || {})), tuck: !!o.tuck, sel: o.top ? "top" : "bottom" }); go("match"); };
+    st.onclick = open; st.onkeydown = e => { if (e.key === "Enter") open(); };
+    const row = document.createElement("div"); row.className = "look-row";
+    const d = new Date(o.created); row.innerHTML = `<span>${d.getMonth() + 1}월 ${d.getDate()}일</span>`;
+    const del = document.createElement("button"); del.textContent = "지우기";
+    del.onclick = async () => { if (!(await ask("이 코디를 룩북에서 지울까요?"))) return; try { await S.store.deleteOutfit(o); S.outfits = S.outfits.filter(x => x !== o); renderLooks(); } catch { toast("지우지 못했어요"); } };
+    row.append(del); card.append(st, row); box.append(card);
+  }
+  $("#looksEmpty").innerHTML = list.length ? "" : `<p class="empty-note">아직 저장한 코디가 없어요. MATCH 화면에서 마음에 드는 조합을 SAVE 하면 여기에 모여요.</p>`;
+}
+
+/* ---------- boot ---------- */
+(async () => {
+  const { store, data } = await pickStore();
+  S.store = store; S.items = data.items; S.outfits = data.outfits;
+  $$("[data-go]").forEach(b => b.disabled = false);
+  renderHome();
+})();
+})();
+</script>
+</body>
+</html>
